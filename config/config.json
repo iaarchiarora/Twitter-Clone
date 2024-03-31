@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "aarchi123",
+    "database": "twitterClone",
+    "host": "localhost",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "aarchi123",
+    "database": "twitterClone",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": "aarchi123",
+    "database": "twitterClone",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}

@@ -1,0 +1,356 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitter Login</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #15202b; /* Twitter's dark theme background color */
+      color: #fff; /* Text color */
+    }
+
+    .container {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .twitter-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .twitter-logo {
+      width: 100px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #1da1f2; /* Twitter's primary color for headings */
+      margin-bottom: 10px;
+    }
+
+    form {
+      background-color: #192734; /* Twitter's dark theme form background color */
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #1da1f2; /* Twitter's primary color for input borders */
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+      background-color: #15202b; /* Twitter's dark theme background color */
+      color: #fff; /* Text color */
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 20px;
+      background-color: #1da1f2; /* Twitter's primary color for buttons */
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0d8bf0; /* Twitter's button hover color */
+    }
+
+    a {
+      color: #1da1f2; /* Twitter's primary color for links */
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .message {
+      text-align: center;
+      margin-top: 20px;
+      padding: 15px;
+      background-color: #192734; /* Twitter's dark theme background color */
+      color: #fff; /* Text color */
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="twitter-header">
+      <img class="twitter-logo" src="./images/twitter.png" alt="Twitter Logo">
+      <h1>Twitter Login</h1>
+    </div>
+    <p class="message"><%= message %></p>
+    <form action="/home" method="post">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" required> 
+      
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required>
+
+      <button type="submit">Login</button>
+
+      <div><a href="/create">Don't have an account?</a></div>
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Twitter Login</title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f8fa;
+    }
+
+    .container {
+      max-width: 300px;
+      margin: 0 auto;
+    }
+
+    .twitter-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .twitter-logo {
+      width: 100px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #1da1f2;
+      margin-bottom: 10px;
+    }
+
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 8px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 20px;
+      background-color: #1da1f2;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0d8bf0;
+    }
+
+    a {
+      color: #1da1f2;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .message {
+  text-align: center;
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f0f8ff;
+  color: #333;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1.5;
+  color:blue ;
+}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="twitter-header">
+      <img class="twitter-logo" src="./images/twitter.png" alt="Twitter Logo">
+      <h1>Twitter Login</h1>
+    </div>
+    <p class="message"><%= message %></p>
+    <form action="/home" method="post">
+      <label for="username">Username:</label>
+      <input type="text" name="username" id="username" required> 
+      
+      <label for="password">Password:</label>
+      <input type="password" name="password" id="password" required>
+
+      <button type="submit">Login</button>
+
+      <div><a href="/create">Don't have an account?</a></div>
+    </form>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ -->
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+  <head>
+    <title>Twitter Clone</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Welcome to Twitter</p>
+    <div>
+      <form action="/home" method="post">
+        username <input type="text" name="username" id="username"><br><br>
+        password <input type="password" name="password" id="password"><br><br>
+        <button>Login</button>
+        <button>Logout</button>
+      </form>
+    </div>
+  
+  </body>
+</html> --> 
